@@ -3,6 +3,9 @@
   "displayName": "Terraform Docs Viewer",
   "description": "Open Terraform Docs by right cliking resources",
   "publisher": "dotpwsh",
+  "repository": {
+    "url": "https://github.com/madsaune/terraform-docs-viewer"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.53.0"
