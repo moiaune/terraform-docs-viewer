@@ -1,0 +1,51 @@
+{
+  "name": "terraform-docs-viewer",
+  "displayName": "Terraform Docs Viewer",
+  "description": "Open Terraform Docs by right cliking resources",
+  "publisher": "dotpwsh",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.53.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:terraform-docs-viewer.openDocs",
+    "onLanguage:terraform"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "terraform-docs-viewer.openDocs",
+        "title": "Open in Terraform Registry"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "resourceLangId == terraform",
+          "group": "myGroup@1",
+          "command": "terraform-docs-viewer.openDocs"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.53.0",
+    "eslint": "^7.19.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.2.1",
+    "typescript": "^4.1.3",
+    "vscode-test": "^1.5.0"
+  }
+}
