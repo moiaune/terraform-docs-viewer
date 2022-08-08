@@ -3,7 +3,7 @@
   "displayName": "Terraform Docs Viewer",
   "description": "Open Terraform Docs by right-clicking resources",
   "publisher": "madsmoiaune",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "./extension.js",
   "repository": {
     "url": "https://github.com/madsaune/terraform-docs-viewer"
