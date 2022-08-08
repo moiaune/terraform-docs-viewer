@@ -6,4 +6,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.0.1] - 01-05-2021
 - Initial release
+
+## [1.0.0] - 08-08-2022
+
+### Changed
+
+- Update `package.json` for publishing to [Visual Studio Marketplace](https://marketplace.visualstudio.com/)
+- Update `README.md`

@@ -1,12 +1,13 @@
 {
   "name": "terraform-docs-viewer",
   "displayName": "Terraform Docs Viewer",
-  "description": "Open Terraform Docs by right cliking resources",
-  "publisher": "dotpwsh",
+  "description": "Open Terraform Docs by right-clicking resources",
+  "publisher": "madsmoiaune",
+  "version": "0.0.1",
+  "main": "./extension.js",
   "repository": {
     "url": "https://github.com/madsaune/terraform-docs-viewer"
   },
-  "version": "0.0.1",
   "engines": {
     "vscode": "^1.53.0"
   },
@@ -17,22 +18,17 @@
     "onCommand:terraform-docs-viewer.openDocs",
     "onLanguage:terraform"
   ],
-  "main": "./extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "terraform-docs-viewer.openDocs",
-        "title": "Open in Terraform Registry"
-      }
-    ],
+    "commands": [{
+      "command": "terraform-docs-viewer.openDocs",
+      "title": "Open in Terraform Registry"
+    }],
     "menus": {
-      "editor/context": [
-        {
-          "when": "resourceLangId == terraform",
-          "group": "myGroup@1",
-          "command": "terraform-docs-viewer.openDocs"
-        }
-      ]
+      "editor/context": [{
+        "when": "resourceLangId == terraform",
+        "group": "myGroup@1",
+        "command": "terraform-docs-viewer.openDocs"
+      }]
     }
   },
   "scripts": {
